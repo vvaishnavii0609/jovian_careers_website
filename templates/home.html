@@ -9,17 +9,26 @@
       #banner{
         height: 360px;
         object-fit: cover;
-        width: 100%
+        width: 100%;
+        margin-bottom: 16px
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class = "img-fluid" id = "banner" src="https://7564bab2-cba0-4f53-aa14-504a4dd4d9b5-00-19c0828gdor00.sisko.replit.dev/static/banner.jpg">
     <div class = "container">
  <h1 class = "text-center mt-2 mb-4">JOVIAN CAREERS</h1>
-    <img class = "img-fluid" id = "banner" src="https://7564bab2-cba0-4f53-aa14-504a4dd4d9b5-00-19c0828gdor00.sisko.replit.dev/static/banner.jpg">
-      </div>
+
     <h2 class = "text-center mt-2 mb-4">ABOUT JOVIAN</h2>
+      <div class = "row">
+        <div class = "col-md-6">
     <p class = "lead">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+        </div>
+        <div class = "d-none d-md-block col-6">
+        <img src = "/static/working.jpg" style = "height:320px; border-radius:4px;">
+        </div>
+      </div>
     <h2 class = "text-center mt-2 mb-4" > OPEN POSITIONS</h2>
     <div>
       {% for job in jobs %}
@@ -29,9 +38,11 @@
     
       
       <div class  = "text-center">
-        <button class = "btn btn-primary btn-lg" >Contact Us </button>
-        <p class = "mt-4">Copyright 2024 , Jovian</p>
+        <a class = "btn btn-primary btn-lg" href = "mailto:hello@jovian.ai?subject=Questions%20about%20Job%20opening%20&body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%20%3A%3Center%20question%20here%3E%0D%0A%0D%0A%0D%0A" >Contact Us </a>
+
       </div>
     </div>
+    {% include 'footer.html' %}
+
   </body>
 </html>
